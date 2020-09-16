@@ -1,0 +1,122 @@
+// LANG SELECT
+
+// .lang {
+//   color: $defaultText;
+//   line-height: 17px;
+//   font-size: 18px;
+//   padding: 0 10px;
+//   cursor: pointer;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   &:after {
+//     content: "\e907";
+//     font-family: 'icomoon';
+//     position: absolute;
+//     right: -15px;
+//   }
+// }
+// .header-lang {
+//   position: absolute;
+//   bottom: -56px;
+//   left: 10px;
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateY(10px);
+//   transition-delay: 1s;
+//   @include transition(.3);
+//   &-container {
+//     margin-right: 42px;
+//     position: relative;
+//     @media (max-width: $breakpoint-lg) {
+//       display: none;
+//     }
+//   }
+//   & > li {
+//     position: relative;
+//     line-height: 18px;
+//     font-size: 17px;
+//     margin-bottom: 4px;
+//     cursor: pointer;
+//     list-style-type: none;
+//     @media (max-width: $breakpoint-lg) {
+//       font-size: 24px;
+//       line-height: 28px;
+//       margin-right: 15px;
+//     }
+//     &:last-child { 
+//       border: none;
+//     }
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       background: $defaultText;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 1px;
+//       opacity: 0;
+//       @include transition(.3);
+//       @media (max-width: $breakpoint-lg) {
+//         display: none;
+//       }
+//     }
+//     &:hover, .active {
+//       &:before {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+// .lang-item.current-lang a {
+//   @media (max-width: $breakpoint-lg) {
+//     font-weight: 500;
+//   }
+// }
+
+// .header-lang-container p {
+//   display: none;
+// }
+
+// .header-lang-container p.selected {
+//   display: block;
+// }
+
+// .header-lang-container {
+//   &:hover {
+//     & .header-lang {
+//       opacity: 1;
+//       visibility: visible;
+//       transform: translateY(0);
+//       transition-delay: 2s;
+//       @include transition(.3);
+//     }
+//   }
+// }
+
+
+// LANG BUTTONS
+
+.lang {
+  margin-left: 24px;
+  &-item {
+    margin-left: 16px;
+    & a {
+      // color: $darkGreyColor;
+      @include fontSize(16, 18);
+      line-height: 1.3;
+      @include transition(.3);
+      &:hover {
+        // color: $redColor;
+        font-weight: 700;
+      }
+    }
+    &.current-lang {
+      & a {
+        // color: $redColor;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+<div class="modal" id="callback-modal">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+        <img src="./img/modal-close.svg" alt="close modal">
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-5 col-lg-12">
+            <div class="modal__title">
+              <div class="modal__title_heading">Let’s get <br> in touch</div>
+              <div class="modal__title_helper">Want to discuss your project or partnership? <br>
+                We are always happy to talk with you!</div>
+              <a href="mailto:info@orangeorange.agency" class="modal__title_email">info@orangeorange.agency</a>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-12">
+            <div class="modal__form">
+              <form action="sendEmail.php" method="POST" enctype="multipart/form-data">
+                <div class="form-section">
+                  <div class="form-heading">
+                    Select the area that you are interested in
+                  </div>
+                  <div class="form-required-fields">
+                    Select the area <span>*</span>
+                  </div>
+                  <div class="form-checkboxes-container">
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="ux-ui-design" id="ux_ui_design">
+                      <label for="ux_ui_design">UX/UI Design</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="web-development" id="web_development">
+                      <label for="web_development">Web Development</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="corporative-website" id="corporative_website">
+                      <label for="corporative_website">Corporative Website</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="landing-page" id="landing_page">
+                      <label for="landing_page">Landing Page</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-section">
+                  <div class="form-heading">
+                    Choose your budget
+                  </div>
+                  <div class="form-number-container">
+                    <div class="form-control">
+                      <input type="number" class="form-input" name="price-from" id="price_from" autocomplete="off" required/>
+                      <label for="price-from" class="label-name">
+                        From ($)<span>*</span>
+                      </label>
+                    </div>
+                    <div class="form-control">
+                      <input type="number" class="form-input" name="price-to" id="price_to" autocomplete="off" required/>
+                      <label for="price-to" class="label-name">
+                        To ($)<span>*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-section">
+                  <div class="form-heading">
+                    Tell us about yourself
+                  </div>
+                  <div class="form-control">
+                    <input type="text" class="form-input" name="name" id="name" autocomplete="off" required />
+                    <label for="name" class="label-name">
+                      Name<span>*</span>
+                    </label>
+                  </div>
+                  <div class="form-control">
+                    <input type="email" class="form-input" name="email" id="email" autocomplete="off" required />
+                    <label for="email" class="label-name">
+                      Email<span>*</span>
+                    </label>
+                  </div>
+                  <div class="form-control form-control-file">
+                    <input id="uploadFile" name="upload" class="form-input">
+                    <label for="" class="label-name">File</label>
+                    <div class="fileBrowse">
+                      <span class="wpcf7-form-control-wrap fileupload">
+                        <input type="file" name="upload" size="40" class="form-file"
+                          id="uploadBtn" accept=".png,.jpg,.jpeg,.zip,.rar,.doc,.docx,.txt" aria-invalid="false">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <textarea name="message" class="form-input" id="message" autocomplete="off" required></textarea>
+                    <label for="country" class="label-name">
+                      Your message<span>*</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-submit-container button-circle">
+                  <button class="form-submit" type="submit">SEND MESSAGE</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

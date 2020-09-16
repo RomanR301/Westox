@@ -1,0 +1,135 @@
+@import "./#src/scss/abstracts/mixins.scss";
+@import "./#src/scss/abstracts/variables.scss";
+
+.navbar {
+  background: $blackColor;
+  transition: all .3s ease-in-out;
+  margin-left: 130px;
+  display: flex;
+  align-items: center;
+  @media (min-width: 1600px) {
+    margin-left: 0;
+  }
+  @media (max-width: $breakpoint-sm) {
+    align-items: flex-start;
+  }
+  @media (max-width: $breakpoint-xl) {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    right: -200%;
+    overflow-y: scroll;
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.active {
+      right: 0;
+    }
+  }
+  & .cta-buttons {
+    // display: none;
+    @media (max-width: $breakpoint-xl) {
+      display: flex;
+      justify-content: center;
+      padding: 0 15px;
+      margin: 0 0 40px 0;
+      & .cta:last-child {
+        margin-right: 3px;
+      }
+    }
+    @media (max-width: $breakpoint-md) {
+      height: 180px;
+    }
+  }
+}
+.menu {
+  margin-right: 20px;
+  @media (min-width: 1800px) {
+    margin-right: 0;
+  }
+  @media (max-width: $breakpoint-xl) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-sm) {
+    align-items: flex-start;
+  }
+  &-item {
+    & a {
+      font-weight: 700;
+      display: block;
+      padding: 20px 15px;
+      font-size: 18px;
+      line-height: 1;
+      @include transition(.3);
+      color: $whiteColor;
+      text-decoration: none;
+      @media (min-width: $breakpoint-xxl) {
+        padding: 26px 28px;
+        font-size: 22px;
+      }
+      &:hover {
+        color: $purpleColor;
+        @media (max-width: $breakpoint-md) {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}
+
+
+.hamburger {
+  display: none;
+  width: 60px;
+  margin-right: -15px;
+  height: 100%;
+  position: relative;
+  @media (max-width: $breakpoint-xl) {
+    display: block;
+  } 
+  & span {
+    position: absolute;
+    right: 15px;
+    display: block;
+    width: 25px;
+    background: $whiteColor;
+    height: 3px;
+    border-radius: 10px;
+    @include transition(.3);
+  }
+  & span:nth-child(1) {
+    top: calc(50% - 8.5px);
+  }
+  & span:nth-child(2) {
+    top: calc(50% - 2.5px);
+  }
+  & span:nth-child(3) {
+    top: calc(50% - 2.5px);
+  }
+  & span:nth-child(4) {
+    top: calc(50% + 3.5px);
+  }
+  &.open {
+    & span {
+      background: $purpleColor;
+    }
+    & span:nth-child(1) {
+      top: calc(50% - 2.5px);
+      width: 0%;
+      right: 50%;
+    }
+    & span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    & span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    & span:nth-child(4) {
+      top: calc(50% - 2.5px);
+      width: 0;
+      right: 50%;
+    }
+  }
+}

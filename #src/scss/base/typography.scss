@@ -1,0 +1,97 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.--semibold {
+  font-weight: 600;
+}
+
+.--regular {
+  font-weight: 400;
+}
+
+.--medium {
+  font-weight: 500;
+}
+
+.--bold {
+  font-weight: 700;
+}
+
+.--uppercase {
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  @include fontSize(60, 160);
+  line-height: 1;
+}
+
+.heading-2 {
+  @include fontSize(40, 100);
+  line-height: 1;
+}
+
+.heading-3 {
+  @include fontSize(25, 55);
+  line-height: 1.2;
+}
+
+.heading-4 {
+  @include fontSize(20, 30);
+  line-height: 1.1;
+}
+
+.heading-5 {
+  @include fontSize(18, 20);
+  line-height: 1.5;
+}
+
+.heading-6 {
+  @include fontSize(16, 16);
+  line-height: 1.5;
+}
+
+
+.section-heading {
+  font-weight: 900;
+  @include fontSize(36, 56);
+  line-height: 1;
+}
+
+
+.icon-icon-arrow:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-icon-bing:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-icon-cart:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-icon-four-sides:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-icon-lines:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-icon-people:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-icon-search:before {
+  content: "\e906";
+  color: #fff;
+}
