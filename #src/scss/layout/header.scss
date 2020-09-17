@@ -1,12 +1,45 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.body-padding {
-  padding-top: 70px;
-  @media (min-width: $breakpoint-xxl) {
-    padding-top: 90px;
+.header {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 102;
+  padding: 30px 0;
+  &-logo {
+    display: block;
+  }
+  &-phone {
+    margin: 0 15px;
+    & a {
+      @include transition(.3);
+      &:hover {
+        color: $blueColor;
+      }
+    }
+  }
+  &-socials {
+    margin-left: 15px;
+    & li {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    & i:before {
+      @include transition(.3);
+    }
+    & a {
+      &:hover {
+        & i:before {
+          color: $blueColor;
+        }
+      }
+    }
   }
 }
-
 
 

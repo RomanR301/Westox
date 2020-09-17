@@ -30,8 +30,9 @@
 }
 
 .heading-1 {
-  @include fontSize(60, 160);
-  line-height: 1;
+  // @include fontSize(60, 160);
+  font-size: 160px;
+  line-height: 1.1;
 }
 
 .heading-2 {
@@ -60,38 +61,22 @@
 }
 
 
-.section-heading {
+.page-title {
+  background-image: url("https://bitcoinist.com/wp-content/uploads/2018/08/shutterstock_764225425.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
-  @include fontSize(36, 56);
-  line-height: 1;
 }
-
 
 .icon-icon-arrow:before {
   content: "\e900";
   color: #fff;
 }
-.icon-icon-bing:before {
+.icon-icon-facebook:before {
   content: "\e901";
   color: #fff;
 }
-.icon-icon-cart:before {
+.icon-icon-instagram:before {
   content: "\e902";
-  color: #fff;
-}
-.icon-icon-four-sides:before {
-  content: "\e903";
-  color: #fff;
-}
-.icon-icon-lines:before {
-  content: "\e904";
-  color: #fff;
-}
-.icon-icon-people:before {
-  content: "\e905";
-  color: #fff;
-}
-.icon-icon-search:before {
-  content: "\e906";
   color: #fff;
 }

@@ -1,11 +1,19 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.btn {
-  &-primary {
+.btn-primary {
+  padding: 15px 45px;
+  display: inline-block;
+  background: $whiteColor;
+  border: none;
+  border-radius: 8px;
+  color: $blueColor;
+  @include transition(.3);
+  @include fontSize(18, 20);
+  cursor: pointer;
+  &:hover {
+    color: $whiteColor;
+    background: $blueColor;
+  }
 
-  }
-  &-secondary {
-    
-  }
 }
