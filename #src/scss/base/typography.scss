@@ -62,10 +62,14 @@
 
 
 .page-title {
-  background-image: url("https://bitcoinist.com/wp-content/uploads/2018/08/shutterstock_764225425.jpg");
+  background-image: url("../../img/text-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  // z-index: -1;
+  // pointer-events: none;
 }
 
 .icon-icon-arrow:before {

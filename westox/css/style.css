@@ -311,7 +311,9 @@ input[type=number] {
 }
 
 .page-title {
-  background-image: url("https://bitcoinist.com/wp-content/uploads/2018/08/shutterstock_764225425.jpg");
+  background-image: url("../../img/text-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
@@ -791,6 +793,63 @@ input[type=number] {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+.main-screen__ices {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.main-screen__ices .card-main-wrapper {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  width: 350px;
+  height: 450px;
+}
+
+.main-screen__ices .card-main-wrapper .card {
+  height: 100%;
+  background: url("../../img/ice4.png") top left no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
+  position: relative;
+}
+
+.main-screen__ices .card-main-wrapper .card:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .5;
+  top: 0;
+  right: 0;
+}
+
+.main-screen__ices .card-main-wrapper:hover .card,
+.main-screen__ices .card-main-wrapper:hover .inner {
+  -webkit-transition: all 0.15s !important;
+  -o-transition: all 0.15s !important;
+  transition: all 0.15s !important;
+}
+
+.main-screen__ices .card-main-wrapper .card .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 3.55);
 }
 
 @media (min-width: 576px) {

@@ -138,5 +138,16 @@ document.body.addEventListener('keyup', function(e) {
 });
 
 
-
+$('.card-main-wrapper').mouseover(function(e) {
+    $('.card-main-wrapper').mousemove(function(e) {
+        var cox = (e.pageX - $(this).offset().left - $(this).width()/2)/20;
+        var coy = ($(this).height()/2 - (e.pageY - $(this).offset().top))/20;
+        $(this).find('.card').css('transform','rotateY('+cox+'deg) rotateX('+coy+'deg)');
+        $(this).find('.inner').css('transform','translateX('+cox+'px) translateY('+(-coy)+'px)');
+    });
+});
+$('.card-main-wrapper').mouseleave(function(e) {
+        $(this).find('.card').css('transform','rotateY(0) rotateX(0)');
+        $(this).find('.inner').css('transform','translateX(0) translateY(0)');
+});
 
