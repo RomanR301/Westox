@@ -2,14 +2,15 @@
 @import "./#src/scss/abstracts/variables.scss";
 
 .navbar {
-  
+  margin-right: -240px;
+  @include transition(.3);
 }
 .menu {
   &-item {
     margin: 0 15px;
     & a {
       display: block;
-      font-size: 16px;
+      font-size: 18px;
       position: relative;
       overflow: hidden;
       &:before {

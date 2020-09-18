@@ -136,7 +136,14 @@ document.body.addEventListener('keyup', function(e) {
     document.body.classList.remove('no-focus-outline');
   }
 });
-
+let mainScreenHeight = $('.main-screen').height();
+$(window).scroll(function () {
+  if ($(this).scrollTop() > mainScreenHeight) {
+    $('header').addClass("scroll-header");
+  } else {
+  	$('header').removeClass("scroll-header");
+  }
+});
 var lFollowX = 0,
 		lFollowY = 0,
 		x = 0,
@@ -177,7 +184,7 @@ $(window).on('mousemove click', function(e) {
 moveBackground();
 
 
-$('.home-about-video').magnificPopup({
+$('.home-about__media').magnificPopup({
   delegate: 'a',
   type: 'image',
   gallery: {

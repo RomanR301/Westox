@@ -316,6 +316,7 @@ input[type=number] {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1;
   font-weight: 900;
 }
 
@@ -328,6 +329,7 @@ input[type=number] {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  line-height: 1;
   margin-bottom: 30px;
 }
 
@@ -346,13 +348,20 @@ input[type=number] {
   color: #fff;
 }
 
+.navbar {
+  margin-right: -240px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .menu-item {
   margin: 0 15px;
 }
 
 .menu-item a {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   overflow: hidden;
 }
@@ -969,10 +978,22 @@ section {
   width: 100%;
   z-index: 102;
   padding: 30px 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .header-logo {
   display: block;
+}
+
+.header-logo img {
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .header-phone {
@@ -1009,6 +1030,39 @@ section {
 
 .header-socials a:hover i:before {
   color: #6091DB;
+}
+
+.header-btn {
+  margin-left: 30px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header.scroll-header {
+  padding: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0.8)));
+  background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.header.scroll-header .header-logo img {
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.header.scroll-header a {
+  font-size: 16px;
+}
+
+.header.scroll-header .header-btn {
+  opacity: 1;
+}
+
+.header.scroll-header .navbar {
+  margin-right: 0;
 }
 
 /**
@@ -2176,10 +2230,6 @@ img.mfp-img {
   width: 100%;
 }
 
-.home-about {
-  height: 100vh;
-}
-
 .ice {
   position: absolute;
   z-index: 10;
@@ -2284,6 +2334,40 @@ img.mfp-img {
   bottom: -40%;
 }
 
+.product-item__order {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(81, 92, 193, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  border-radius: 20px;
+}
+
+.product-item:hover .product-item__order {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 .home-about__text {
   width: 52%;
   margin-right: 30px;
@@ -2309,9 +2393,55 @@ img.mfp-img {
   width: 45%;
 }
 
-.popup-gallery a img {
-  height: auto;
+.media {
+  position: relative;
+}
+
+.media a {
+  display: block;
+}
+
+.media a:before {
+  content: '';
+  position: absolute;
+  background: url("../img/play.png");
+  background-repeat: no-repeat;
+  background-size: 20%;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.media a:hover:before {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.media-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
 @media (min-width: 576px) {
