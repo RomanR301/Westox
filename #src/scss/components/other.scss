@@ -1,6 +1,11 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-
+section {
+  margin-bottom: 60px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 40px;
+  }
+}
 .main-screen {
   position: relative;
   width: 100%;
@@ -37,5 +42,8 @@
     width: 55%;
     margin: 0 auto 30px auto;
     text-align: center;
+    @media (min-width: $breakpoint-xxl) {
+      width: 40%;
+    }
   }
 }

@@ -30,7 +30,6 @@
 }
 
 .heading-1 {
-  // @include fontSize(60, 160);
   font-size: 160px;
   line-height: 1.1;
 }
@@ -69,7 +68,16 @@
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
-
+.section-title {
+  background-image: url("../img/section-title-mask.png");
+  @include fontSize(40, 100);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
 .icon-icon-arrow:before {
   content: "\e900";
   color: #fff;

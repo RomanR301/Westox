@@ -13,8 +13,8 @@
 
 .container-fluid {
   width: 100%;
-  // padding-right: 15px;
-  // padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -61,7 +61,7 @@
   margin: 0;
 }
 
-.p-0 {
+.p-15-0 {
   padding: 0 15px;
   @media (max-width: $breakpoint-md) {
     padding: 0;
@@ -78,6 +78,10 @@
 
 .mb-24 {
   margin-bottom: 24px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 .column {
