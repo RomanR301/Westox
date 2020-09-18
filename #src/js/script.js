@@ -137,17 +137,41 @@ document.body.addEventListener('keyup', function(e) {
   }
 });
 
+var lFollowX = 0,
+		lFollowY = 0,
+		x = 0,
+		y = 0,
+		friction = 1 / 30;
 
-$('.card-main-wrapper').mouseover(function(e) {
-    $('.card-main-wrapper').mousemove(function(e) {
-        var cox = (e.pageX - $(this).offset().left - $(this).width()/2)/20;
-        var coy = ($(this).height()/2 - (e.pageY - $(this).offset().top))/20;
-        $(this).find('.card').css('transform','rotateY('+cox+'deg) rotateX('+coy+'deg)');
-        $(this).find('.inner').css('transform','translateX('+cox+'px) translateY('+(-coy)+'px)');
-    });
-});
-$('.card-main-wrapper').mouseleave(function(e) {
-        $(this).find('.card').css('transform','rotateY(0) rotateX(0)');
-        $(this).find('.inner').css('transform','translateX(0) translateY(0)');
+function moveBackground() {
+	x += (lFollowX - x) * friction;
+	y += (lFollowY - y) * friction;
+
+	//  translate = 'translateX(' + x + 'px, ' + y + 'px)';
+	translate = 'translateX(' + x + 'px) translateY(' + y +'px)';
+
+	$('.ice').css({
+	'-webit-transform': translate,
+	'-moz-transform': translate,
+	'transform': translate
+	});
+
+	window.requestAnimationFrame(moveBackground);
+}
+
+$(window).on('mousemove click', function(e) {
+	
+	var isHovered = $('.ice:hover').length > 0;
+	console.log(isHovered);
+	
+	//if(!$(e.target).hasClass('animate-this')) {
+	if(!isHovered) {
+		var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX)),
+				lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+
+		lFollowX = (20 * lMouseX) / 100;
+		lFollowY = (10 * lMouseY) / 100;
+	}
 });
 
+moveBackground();
