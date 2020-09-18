@@ -2,6 +2,7 @@
 @import "../abstracts/variables";
 
 .main-screen {
+	overflow: hidden;
   &__content {
     z-index: 2;
     display: flex;
@@ -16,15 +17,6 @@
   height: 100vh;
 }
 
-.my-animated-box {
-	// width: 200px;
-	// height: 200px;
-	// position: absolute;
-	// top: 120px;
-	// left: -80px;
-	// z-index: 10;
-}
-
 .ice {
 	position: absolute;
 	z-index: 10;
@@ -37,7 +29,7 @@
 		width: 200px;
 		height: 200px;
 		top: 120px;
-		left: -80px;
+		left: -30px;
 	}
 	&-2 {
 		width: 170px;

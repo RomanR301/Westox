@@ -777,6 +777,10 @@ input[type=number] {
   color: #6091DB;
 }
 
+.main-screen {
+  overflow: hidden;
+}
+
 .main-screen__content {
   z-index: 2;
   display: -webkit-box;
@@ -815,7 +819,7 @@ input[type=number] {
   width: 200px;
   height: 200px;
   top: 120px;
-  left: -80px;
+  left: -30px;
 }
 
 .ice-2 {
