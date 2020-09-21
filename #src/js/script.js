@@ -290,7 +290,7 @@ var attribute = 'data-rellax-speed';
 let i;
 
 for (i = 0; i < items.length; i++) {
-  items[i].setAttribute(attribute, (Math.random() + -1.2));
+  items[i].setAttribute(attribute, (Math.random() - 1));
 }
 
 var rellax = new Rellax('.grid-item', {
