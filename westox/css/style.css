@@ -2444,6 +2444,28 @@ img.mfp-img {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
+.grid {
+  max-width: 100%;
+  margin: 0 15px;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 32.1%;
+  margin-bottom: 66px;
+}
+
+.grid-item {
+  float: left;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;

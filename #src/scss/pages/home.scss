@@ -185,6 +185,26 @@
 
 	}
 }
+.grid {
+	max-width: 100%;
+	margin: 0 15px;
+}
+
+.grid-sizer,
+.grid-item {
+	width: 32.1%;
+	margin-bottom: 66px;
+}
+.grid-item {
+	float: left;
+	border-radius: 20px;
+	overflow: hidden;
+
+}
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
 
 // .popup-gallery {
 //   a {

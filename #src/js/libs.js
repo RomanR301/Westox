@@ -1,2 +1,5 @@
 @@include('../libs/jquery-3.4.1.js')
 @@include('../libs/magnific-popup.min.js')
+@@include('../libs/imagesLoaded.min.js')
+@@include('../libs/masonry.min.js')
+@@include('../libs/rellax.min.js')
