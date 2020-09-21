@@ -275,15 +275,27 @@ var $grid = $('.grid').masonry({
   itemSelector: '.grid-item',
   percentPosition: true,
   gutter: 26,
-  columnWidth: '.grid-sizer'
+  columnWidth: '.grid-sizer',
+  initLayout: false,
 });
 // layout Masonry after each image loads
 $grid.imagesLoaded().progress( function() {
   $grid.masonry();
 });  
 
+function onLayout() {
+  console.log('layout done');
+  $grid.masonry()
+}
+$grid.on( 'layoutComplete', onLayout() );
+// $grid.masonry( 'on', 'layoutComplete', function() {
+//   console.log('layout is complete');
+//   $('grid').addClass('complete');
+//   $grid.masonry();
+// });
 
-console.log(Math.random() + .5);
+
+// console.log(Math.random() + .5);
 
 let items = $('.grid .grid-item');
 var attribute = 'data-rellax-speed';
