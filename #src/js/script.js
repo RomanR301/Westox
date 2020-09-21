@@ -295,8 +295,9 @@ var attribute = 'data-rellax-speed';
 let i;
 
 for (i = 0; i < items.length; i++) {
-  // items[i].setAttribute(attribute, Math.random() - 1.5) * 1;
-  items[i].setAttribute(attribute, 2);
+  items[i].setAttribute(attribute, Math.random() * (1.7 - 1.3)) - 3
+  ;
+  // items[i].setAttribute(attribute, -2);
 
 }
 
