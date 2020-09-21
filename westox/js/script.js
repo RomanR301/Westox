@@ -271,61 +271,37 @@ $('.popup-gallery').magnificPopup({
   }
 });
 
-var $grid = $('.grid').masonry({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  gutter: 26,
-  columnWidth: '.grid-sizer',
-  initLayout: false,
+
+$(document).ready(function () {
+  var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    gutter: 26,
+    columnWidth: '.grid-sizer',
+    initLayout: false,
+  });
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
 });
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});  
-
-function onLayout() {
-  console.log('layout done');
-  $grid.masonry()
-}
-$grid.on( 'layoutComplete', onLayout() );
-// $grid.masonry( 'on', 'layoutComplete', function() {
-//   console.log('layout is complete');
-//   $('grid').addClass('complete');
-//   $grid.masonry();
-// });
 
 
-// console.log(Math.random() + .5);
+
+
+
 
 let items = $('.grid .grid-item');
 var attribute = 'data-rellax-speed';
 let i;
 
 for (i = 0; i < items.length; i++) {
-  items[i].setAttribute(attribute, (Math.random() - 1));
+  items[i].setAttribute(attribute, (Math.random() - 1.5));
 }
 
 var rellax = new Rellax('.grid-item', {
-  // speed: ,
-  // center: false,
-  // wrapper: null,
-  // round: true,
-  // vertical: true,
-  // horizontal: false,
   center: true
 });
 
 
 
 
-
-// var $grid = $('.grid').masonry({
-//     // set itemSelector so .grid-sizer is not used in layout
-//     itemSelector: '.grid-item',
-//     columnWidth: '.grid-sizer',
-//     percentPosition: true
-// });
-// // layout Masonry after each image loads
-// $grid.imagesLoaded().progress( function() {
-//   $grid.masonry('layout');
-// });

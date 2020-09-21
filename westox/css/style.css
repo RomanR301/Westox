@@ -2449,6 +2449,10 @@ img.mfp-img {
   margin: 0 15px;
 }
 
+.grid.active {
+  display: block;
+}
+
 .grid-sizer,
 .grid-item {
   width: 32.1%;

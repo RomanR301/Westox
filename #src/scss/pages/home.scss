@@ -186,8 +186,12 @@
 	}
 }
 .grid {
+	// display: none;
 	max-width: 100%;
 	margin: 0 15px;
+	&.active {
+		display: block;
+	}
 }
 
 .grid-sizer,
