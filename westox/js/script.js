@@ -144,44 +144,46 @@ $(window).scroll(function () {
   	$('header').removeClass("scroll-header");
   }
 });
-var lFollowX = 0,
-		lFollowY = 0,
-		x = 0,
-		y = 0,
-		friction = 1 / 30;
 
-function moveBackground() {
-	x += (lFollowX - x) * friction;
-	y += (lFollowY - y) * friction;
+// ICES
+// var lFollowX = 0,
+// 		lFollowY = 0,
+// 		x = 0,
+// 		y = 0,
+// 		friction = 1 / 30;
 
-	//  translate = 'translateX(' + x + 'px, ' + y + 'px)';
-	translate = 'translateX(' + x + 'px) translateY(' + y +'px)';
+// function moveBackground() {
+// 	x += (lFollowX - x) * friction;
+// 	y += (lFollowY - y) * friction;
 
-	$('.ice').css({
-	'-webit-transform': translate,
-	'-moz-transform': translate,
-	'transform': translate
-	});
+// 	//  translate = 'translateX(' + x + 'px, ' + y + 'px)';
+// 	translate = 'translateX(' + x + 'px) translateY(' + y +'px)';
 
-	window.requestAnimationFrame(moveBackground);
-}
+// 	$('.ice').css({
+// 	'-webit-transform': translate,
+// 	'-moz-transform': translate,
+// 	'transform': translate
+// 	});
 
-$(window).on('mousemove click', function(e) {
+// 	window.requestAnimationFrame(moveBackground);
+// }
+
+// $(window).on('mousemove click', function(e) {
 	
-	var isHovered = $('.ice:hover').length > 0;
-	// console.log(isHovered);
+// 	var isHovered = $('.ice:hover').length > 0;
+// 	// console.log(isHovered);
 	
-	//if(!$(e.target).hasClass('animate-this')) {
-	if(!isHovered) {
-		var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX)),
-				lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+// 	//if(!$(e.target).hasClass('animate-this')) {
+// 	if(!isHovered) {
+// 		var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX)),
+// 				lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
 
-		lFollowX = (40 * lMouseX) / 100;
-		lFollowY = (20 * lMouseY) / 100;
-	}
-});
+// 		lFollowX = (40 * lMouseX) / 100;
+// 		lFollowY = (20 * lMouseY) / 100;
+// 	}
+// });
 
-moveBackground();
+// moveBackground();
 
 
 $('.home-about__media').magnificPopup({
@@ -231,6 +233,22 @@ $('.popup-gallery').magnificPopup({
     navigateByImgClick: true,
     preload: [0,1] // Will preload 0 - before current, and 1 after the current image
   },
+  image: {
+    titleSrc: 'title',
+      titleSrc: function(item) {
+        return item.el.attr('title');
+    },
+    markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+
+            '<div class="mfp-bottom-bar">'+
+              '<div class="mfp-title"></div>'+
+              '<a href="www.instagram.com" class="instagram-btn btn btn-primary"><i class="icon-icon-instagram"></i>Переглянути в Instagram</a>'+
+              '<div class="mfp-counter"></div>'+
+            '</div>'+
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+  },
   callbacks: {
     elementParse: function(item) {
       console.log(item.el[0].className);
@@ -260,16 +278,18 @@ $('.popup-gallery').magnificPopup({
            }
         }
       } else {
-         item.type = 'image',
-         item.tLoading = 'Loading image #%curr%...',
-         item.mainClass = 'mfp-img-mobile',
-         item.image = {
-           tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-         }
+        item.type = 'image',
+        item.tLoading = 'Loading image #%curr%...',
+        item.mainClass = 'mfp-img-mobile',
+        item.image = {
+          tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        }
       }
-    }
+    },
   }
 });
+
+
 
 
 $(document).ready(function () {
@@ -283,27 +303,41 @@ $(document).ready(function () {
   $grid.imagesLoaded().progress( function() {
     $grid.masonry('layout');
   });
+
+  // $(".instagram img").attr("alt", "instagram");
+
+  // $(document).on('click', '.grid-item', function() {
+  //   $('img[alt="instagram"]').siblings().addClass('visible');
+  // })
+
+  // $(document).on('click', '.mfp-arrow', function() {
+  //   $(".mfp-img").each(function(){
+  //     // var $this = $(this);
+  //     // if (!$this.attr("alt")){
+  //     //   console.log('has-alt')
+  //     // }
+  //  });
+
+    // if ($('.mfp-img[alt="instagram"]')) {
+    //   $('.mfp-img').siblings().addClass('visible');
+    // } else {
+    //   $('.mfp-img').siblings().removeClass('visible');
+    // }
+//   })
 });
-
-
-
-
-
 
 let items = $('.grid .grid-item');
 var attribute = 'data-rellax-speed';
 let i;
 
 for (i = 0; i < items.length; i++) {
-  items[i].setAttribute(attribute, Math.random() * (1.7 - 1.3)) - 3
-  ;
-  // items[i].setAttribute(attribute, -2);
+  items[i].setAttribute(attribute, Math.random() * (1.8 - 1.3)) - 3;
 
 }
-
 var rellax = new Rellax('.grid-item', {
   center: true
 });
+
 
 
 

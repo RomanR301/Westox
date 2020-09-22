@@ -13,13 +13,16 @@
 </head>
 
 
-<bod>
+<body>
   <header class="header">
     <div class="container-fluid p-0">
       <div class="row align-justify align-middle">
         <a href="/" class="header-logo">
           <img src="./img/main-logo.svg" alt="">
         </a>
+        <div class="header-btn">
+          <div class="btn-primary">Замовити лід</div>
+        </div>
         <div class="navbar d-flex align-middle">
           <ul class="menu d-flex">
             <li class="menu-item">
@@ -50,9 +53,6 @@
               </a>
             </li>
           </ul>
-          <div class="header-btn">
-            <div class="btn-primary">Замовити лід</div>
-          </div>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="container-fluid full-height">
       <div class="row full-height m-0">
         <!-- HARDCODE -->
-        <div class="ice ice-1">
+        <!-- <div class="ice ice-1">
           <img src="./img/ice1.png" alt="image of ice">
         </div>
         <div class="ice ice-2">
@@ -78,10 +78,10 @@
         </div>
         <div class="ice ice-5">
           <img src="./img/ice5.png" alt="image of ice">
-        </div>
+        </div> -->
         <!-- end HARDCODE -->
         <div class="main-screen__image default-icon">
-          <img src="./img/main-screen-image.jpg" alt="">
+          <img src="./img/main-screen-bg.jpg" alt="">
         </div>
         <div class="main-screen__content">
           <h1 class="main-screen__title heading-1 page-title">
@@ -239,7 +239,6 @@
           <a href="https://www.youtube.com/watch?v=5blZvJNkMfQ" class="video" title="This is a video">
             <img src="./img/video-screenshot.jpg" alt="Alt text" />
             <div class="media-description">Сухий лід та його властивості</div>
-            <div class="media-play"></div>
           </a>
         </div>
       </div>
@@ -259,93 +258,75 @@
           </div>
         </div>
       </div>
-      <!-- <div class="row"> -->
-        <div class="grid">
-          <div class="grid-sizer"></div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-          </div>
-          <div class="grid-item">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
-          </div>
+      <div class="grid popup-gallery">
+        <div class="grid-sizer"></div>
+
+        <div class="grid-item image">
+          <a href="./img/gallery1.jpg" class="image" title="Сухий лід в дії Сухий лід в дії">
+            <img src="./img/gallery1.jpg">
+            <span class="grid-item__description">фото</span>
+          </a>
         </div>
-        
-      <!-- </div> -->
+        <div class="grid-item instagram">
+          <a href="./img/gallery2.jpg" class="instagram" title="Сухий лід в дії">
+            <img src="./img/gallery2.jpg" alt="instagram"/>
+            <span class="grid-item__description">інстаграм</span>
+          </a>
+        </div>
+        <div class="grid-item media">
+          <a href="https://www.youtube.com/watch?v=5blZvJNkMfQ" class="video" title="Сухий лід в дії">
+            <img src="./img/gallery3.jpg" />
+            <span class="grid-item__description">відео</span>
+          </a>
+        </div>
+        <div class="grid-item image">
+          <a href="./img/gallery4.jpg" title="Сухий лід в дії">
+            <img src="./img/gallery4.jpg" />
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+        <div class="grid-item image">
+          <a href="./img/gallery5.jpg" title="Сухий лід в дії">
+            <img src="./img/gallery5.jpg" />
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+        <div class="grid-item image">
+          <a href="./img/gallery6.jpg" title="Сухий лід в дії">
+            <img src="./img/gallery6.jpg" />
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+        <div class="grid-item media">
+          <a href="https://www.youtube.com/watch?v=5blZvJNkMfQ" class="video" title="Сухий лід в дії">
+            <img src="./img/gallery7.jpg" />
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+        <div class="grid-item instagram">
+          <a href="./img/gallery8.jpg" title="Сухий лід в дії">
+            <img src="./img/gallery8.jpg" alt="instagram"/>
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+        <div class="grid-item image">
+          <a href="./img/gallery2.jpg" title="Сухий лід в дії">
+            <img src="./img/gallery9.jpg" />
+            <span class="grid-item__description">Сухий лід в дії</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- <div class="popup-gallery d-flex"> -->
-
-  
-      <!-- <a href="https://images.unsplash.com/photo-1524648895410-53fcb1d98094?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d635ce56a53ed68189603030b7ee6b26&auto=format&fit=crop&w=634&q=80"
-        class="image" title="This is a image">
-        <img
-          src="https://images.unsplash.com/photo-1524648895410-53fcb1d98094?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d635ce56a53ed68189603030b7ee6b26&auto=format&fit=crop&w=634&q=80"
-          alt="Alt text" style="height: 250px;" />
-      </a>
-      <a href="https://images.unsplash.com/photo-1517191434949-5e90cd67d2b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a42146c9d68f19ef36d4a2298a7f2d3a&auto=format&fit=crop&w=675&q=80"
-        class="" title="This is a image">
-        <img
-          src="https://images.unsplash.com/photo-1517191434949-5e90cd67d2b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a42146c9d68f19ef36d4a2298a7f2d3a&auto=format&fit=crop&w=675&q=80"
-          alt="Alt text" style="height: 250px;" />
-      </a>
-      <a href="https://www.youtube.com/watch?v=YwTRY6L0KP0" class="video" title="This is a video">
-        <img src="https://img.youtube.com/vi/YwTRY6L0KP0/hqdefault.jpg" alt="Alt text" style="height: 250px;" />
-      </a>
-      <a href="https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89d554d84ae613e474ba72dd34d0473a&auto=format&fit=crop&w=1350&q=80"
-        class="image" title="This is a image">
-        <img
-          src="https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89d554d84ae613e474ba72dd34d0473a&auto=format&fit=crop&w=1350&q=80"
-          alt="Alt text" style="height: 250px;" />
-      </a> -->
-    <!-- </div> -->
+  <section class="clients">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="section-title">
+          КЛІЄНТИ
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
 <!-- <footer class="footer">

@@ -80,6 +80,11 @@
   line-height: 1;
   margin-bottom: 30px;
 }
+
+.icon-zoom-in:before {
+  content: "\e903";
+  color: #fff;
+}
 .icon-icon-arrow:before {
   content: "\e900";
   color: #fff;

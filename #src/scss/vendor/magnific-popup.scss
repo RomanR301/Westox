@@ -349,3 +349,130 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+
+
+
+.mfp-bottom-bar {
+  margin-top: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mfp-img {
+  max-height: 550px!important;
+  border-radius: 20px;
+  @media (min-width: $breakpoint-xxl) {
+    max-height: 770px!important;
+  }
+}
+
+.mfp-figure {
+  padding: 40px 40px 80px 40px;
+  background: #5C5C5C;
+  border-radius: 20px;
+}
+
+img.mfp-img {
+  padding: 0;
+}
+
+.mfp-counter {
+  top: 15px;
+  right: 7px;
+  font-size: 14px;
+}
+
+.mfp-title {
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+  font-size: 15px;
+  max-width: 40%;
+}
+
+.mfp-close {
+  opacity: 1;
+  right: 6px!important;
+  font-size: 40px;
+}
+
+.mfp-counter {
+  display: none;
+}
+
+.instagram-btn {
+  margin-left: 49px;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 14px;
+  line-height: 1;
+  // display: none;
+  & i {
+    margin-right: 10px;
+    &:before {
+      color: $blueColor;
+    }
+  }
+  &:hover {
+    & i:before {
+      color: $whiteColor;
+    }
+  }
+}
+
+.mfp-bottom-bar.visible {
+  & .instagram-btn {
+    display: flex;
+  }
+}
+
+.mfp-arrow {
+  background: #202020!important;
+  border-radius: 100%;
+  width: 210px;
+  height: 210px;
+  left: unset;
+  right: unset;
+  top: calc(50% - 105px);
+  @include transition(.3);
+  &:after {
+    font-family: 'icomoon';
+    content: "\e900";
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 0;
+    left: unset;
+    right: unset;
+  }
+  &:before {
+    display: none;
+  }
+  &-left {
+    left: -130px;
+    &:after {
+      display: block;
+      transform: rotate(180deg);
+      left: 130px;
+    }
+    &:hover {
+      transform: translate(20px, 0px);
+    }
+  }
+  &-right {
+    right: -130px;
+    &:after {
+      right: 130px;
+    }
+    &:hover {
+      transform: translate(-20px, 0px);
+    }
+  }
+}
