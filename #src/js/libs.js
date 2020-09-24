@@ -3,3 +3,6 @@
 @@include('../libs/imagesLoaded.min.js')
 @@include('../libs/masonry.min.js')
 @@include('../libs/rellax.min.js')
+@@include('../libs/swiper.min.js')
+@@include('../libs/input-mask.min.js')
+@@include('../libs/smoke.js')

@@ -9,6 +9,7 @@
   border-radius: 8px;
   color: $blueColor;
   font-weight: 700;
+  outline: none;
   @include transition(.3);
   @include fontSize(18, 20);
   cursor: pointer;

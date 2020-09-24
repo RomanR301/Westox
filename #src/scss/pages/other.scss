@@ -1,2 +1,33 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.other-page {
+  margin-bottom: 0;
+  .main-screen__content {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  .main-screen__title {
+    font-size: 240px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 140px;
+      margin-bottom: 15px;
+    }
+  }
+  &.thankyou-page {
+    & .main-screen__title {
+      font-size: 160px;
+      margin-bottom: 10px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 70px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+  } 
+  &__subtitle {
+    margin-bottom: 15px;
+  }
+}

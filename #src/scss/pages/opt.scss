@@ -1,0 +1,48 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.banner {
+  height: 500px;
+  background-image: url('../img/main-screen-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  &:before {
+    content: '';  
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  &-image {
+    & img {
+      object-fit: cover;
+    }
+  }
+  &-content {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    &__title {
+
+    }
+    &__subtitle {
+      max-width: 40%;
+      & p {
+        font-size: 20px;
+      }
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

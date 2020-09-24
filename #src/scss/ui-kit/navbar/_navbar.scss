@@ -4,6 +4,9 @@
 .navbar {
   // margin-right: -240px;
   @include transition(.3);
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
 }
 .menu {
   &-item {

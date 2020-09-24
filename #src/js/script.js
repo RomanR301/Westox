@@ -113,6 +113,64 @@ let modal = {
              }, "slow");
       });
 
+      $(".set").on("click", function(e) {
+      e.preventDefault();
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this)
+            .find(".content")
+            .slideUp(200);
+          $(".set > a i")
+            .removeClass("fa-minus")
+            .addClass("fa-plus");
+        } else {
+          $(".set > a i")
+            .removeClass("fa-minus")
+            .addClass("fa-plus");
+          $(this)
+            .find("i")
+            .removeClass("fa-plus")
+            .addClass("fa-minus");
+          $(".set").removeClass("active");
+          $(this).addClass("active");
+          $(".content").slideUp(200);
+          $(this)
+            .find(".content")
+            .slideDown(200);
+        }
+      });
+    
+      $('.mask-phone').mask('+38 0(99)-999-99-99');
+
+      // var canvas = document.querySelectorAll('.canvas')
+
+      // var ctx = canvas.getContext('3d')
+      // canvas.width = 1000
+      // canvas.height = 1000
+    
+      // var party = SmokeMachine(ctx, [54, 16.8, 18.2])
+    
+      // party.start() // start animating
+    
+      // party.addSmoke(500,500,10) // wow we made smoke
+    
+      // setTimeout(function(){
+    
+      //   party.stop() // stop animating
+    
+      //   party.addSmoke(600,500,100)
+      //   party.addSmoke(500,600,20)
+    
+      //   for(var i=0;i<10;i++){
+      //     party.step(10) // pretend 10 ms pass and rerender
+      //   }
+    
+      //   setTimeout(function(){
+      //     party.start()
+      //   },1000)
+    
+      // },1000)
+    
   }
 };
 
@@ -120,22 +178,8 @@ let modal = {
 jQuery(function () {
   front.init();
   modal.init();
-    
 });
 
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 10) {
-//     $('.scroll-to-top').addClass("scrolled");
-//   } else {
-//   	$('.scroll-to-top').removeClass("scrolled");
-//   }
-// });
-
-document.body.addEventListener('keyup', function(e) {
-  if (e.which === 9) /* tab */ {
-    document.body.classList.remove('no-focus-outline');
-  }
-});
 let mainScreenHeight = $('.main-screen').height();
 $(window).scroll(function () {
   if ($(this).scrollTop() > mainScreenHeight) {
@@ -326,19 +370,44 @@ $(document).ready(function () {
 //   })
 });
 
-let items = $('.grid .grid-item');
-var attribute = 'data-rellax-speed';
-let i;
+// let items = $('.grid .grid-item');
+// var attribute = 'data-rellax-speed';
+// let i;
 
-for (i = 0; i < items.length; i++) {
-  items[i].setAttribute(attribute, Math.random() * (1.8 - 1.3)) - 3;
+// for (i = 0; i < items.length; i++) {
+//   items[i].setAttribute(attribute, Math.random() * (1.8 - 1.3)) - 3;
 
-}
-var rellax = new Rellax('.grid-item', {
-  center: true
-});
-
-
+// }
+// var rellax = new Rellax('.grid-item', {
+//   center: true
+// });
 
 
 
+
+
+$(document).ready(function(){
+  var swiperTestimonial = new Swiper('.clients-carousel', {
+    slidesPerView: 3,
+    // spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next',
+    },
+    // breakpoints: {
+    //     320: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 30,
+    //     autoHeight: true,
+    //     },
+    //     767: {
+    //       slidesPerView: 2,
+    //     },
+    //     992: {
+    //         slidesPerView: 3,
+    //     },
+    // }
+  });
+})

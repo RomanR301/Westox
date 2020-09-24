@@ -24,7 +24,9 @@
 .--bold {
   font-weight: 700;
 }
-
+.--heavy {
+  font-weight: 900;
+}
 .--uppercase {
   text-transform: uppercase;
 }
@@ -46,7 +48,7 @@
 
 .heading-4 {
   @include fontSize(20, 30);
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 .heading-5 {
@@ -62,18 +64,19 @@
 
 .page-title {
   background-image: url("../img/text-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  background-size: contain;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
   font-weight: 900;
+  text-align: center;
 }
 .section-title {
   background-image: url("../img/section-title-mask.png");
   @include fontSize(40, 100);
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  background-size: contain;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
