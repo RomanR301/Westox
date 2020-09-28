@@ -3,12 +3,14 @@
 
 .other-page {
   margin-bottom: 0;
+  height: 100vh;
   .main-screen__content {
     max-width: 500px;
     margin: auto;
     text-align: center;
   }
   .main-screen__title {
+    max-width: unset;
     font-size: 240px;
     @media (max-width: $breakpoint-md) {
       font-size: 140px;

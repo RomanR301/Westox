@@ -10,11 +10,16 @@
   z-index: 102;
   padding: 30px 0;
   @include transition(.3);
+  @media (max-width: 1400px) {
+    padding: 10px 0;
+  }
   &-logo {
     display: block;
+    @media (max-width: 1400px) {
+      width: 50px;
+    }
     & img {
       @include transition(.3);
-      transform: scale(1);
     }
   }
   &-phone {
@@ -46,16 +51,29 @@
     }
   }
   &-btn {
-    margin-left: 30px;
+    margin-left: 50px;
     opacity: 0;
+    visibility: hidden;
     @include transition(.3);
+    @media (max-width: 1400px) {
+      margin-left: auto;
+      & button {
+        padding: 10px 25px;
+      }
+    }
+    @media (max-width: $breakpoint-xl) {
+      opacity: 1;
+      visibility: visible;
+    }
   }
   &.scroll-header {
-    padding: 0;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
     & .header-logo {
       & img {
         transform: scale(.6);
+        @media (max-width: $breakpoint-lg) {
+          transform: unset;
+        }
       }
     }
     & a {
@@ -63,6 +81,7 @@
     }
     & .header-btn {
       opacity: 1;
+      visibility: visible; 
     }
     & .navbar {
       margin-right: 0;

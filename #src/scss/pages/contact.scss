@@ -1,0 +1,15 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.contact {
+  position: relative;
+}
+
+.contact {
+  &__map {
+    height: 1200px;
+    & img {
+      object-fit: cover;
+    }
+  }
+}

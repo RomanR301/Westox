@@ -45,20 +45,34 @@ section {
     @media (min-width: $breakpoint-xxl) {
       width: 40%;
     }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
   }
   & .main-screen__content {
-    justify-content: flex-end;
+    padding-top: 144px;
+    justify-content: center;
+    @media (max-width: 1400px) {
+      padding-top: 92px;
+    }
   }
   &__title {
-    max-width: 70%;
+    max-width: 90%;
+    padding-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
 }
 
 .home-page {
   & .main-screen {
     height: 100vh;
-    &__content {
-      justify-content: center;
+  }
+  & .main-screen__title {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 10px;
     }
   }
 }

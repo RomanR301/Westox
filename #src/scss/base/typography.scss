@@ -32,8 +32,9 @@
 }
 
 .heading-1 {
-  font-size: 160px;
+  @include fontSize(40, 160);
   line-height: 1.1;
+  
 }
 
 .heading-2 {

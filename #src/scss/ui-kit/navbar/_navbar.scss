@@ -4,6 +4,7 @@
 .navbar {
   // margin-right: -240px;
   @include transition(.3);
+  margin-left: auto;
   @media (max-width: $breakpoint-xl) {
     display: none;
   }
@@ -11,11 +12,17 @@
 .menu {
   &-item {
     margin: 0 15px;
+    @media (max-width: 1400px) {
+      margin: 0 8px;
+    }
     & a {
       display: block;
       font-size: 18px;
       position: relative;
       overflow: hidden;
+      @media (max-width: 1400px) {
+        font-size: 16px;
+      }
       &:before {
         content: '';
         position: absolute;

@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  padding: 10px;
   &:before {
     content: '';  
     background: rgba(0, 0, 0, 0.6);
@@ -35,6 +36,9 @@
     }
     &__subtitle {
       max-width: 40%;
+      @media (max-width: $breakpoint-md) {
+        max-width: 100%;
+      }
       & p {
         font-size: 20px;
       }
