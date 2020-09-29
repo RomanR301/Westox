@@ -748,6 +748,7 @@ input[type=number] {
 .form-control {
   height: 54px;
   margin-bottom: 24px;
+  position: relative;
 }
 
 .form-control.form-textarea {
@@ -1136,10 +1137,14 @@ section {
 }
 
 .header-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 15px;
 }
 
 .header-phone a {
+  font-size: 18px;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -3180,6 +3185,7 @@ img.mfp-img {
   background: #202020;
   width: 180px;
   border-radius: 100%;
+  outline: none;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -3327,6 +3333,11 @@ img.mfp-img {
 
 .home-contact__map {
   height: 580px;
+}
+
+.home-contact__map img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contact__title {
@@ -3549,7 +3560,39 @@ img.mfp-img {
   position: relative;
 }
 
+.contact .contact__block {
+  top: unset;
+  bottom: 120px;
+  left: 60px;
+}
+
+.contact__form {
+  width: 670px;
+  background: #000000;
+  padding: 0 120px 50px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 20px 0px;
+}
+
+.contact__form label {
+  color: #FF0000;
+  font-size: 20px;
+  position: absolute;
+  right: -20px;
+  top: 4px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .contact__map {
+  width: 100%;
   height: 1200px;
 }
 
@@ -4028,6 +4071,10 @@ img.mfp-img {
     font-weight: 900;
   }
 
+  .menu-item a:before {
+    display: none;
+  }
+
   .hamburger {
     display: block;
   }
@@ -4046,7 +4093,7 @@ img.mfp-img {
   }
 
   .header-socials {
-    margin: 60px 0 0 0;
+    margin: 40px 0 0 0;
   }
 
   .header-socials a {
@@ -4180,6 +4227,30 @@ img.mfp-img {
 
   .clients-carousel:after {
     top: 80px;
+  }
+
+  .home-contact__block {
+    width: 350px;
+  }
+
+  .contact .section-title {
+    padding: 0 15px;
+  }
+
+  .contact .contact__block {
+    position: static;
+    background: #000000;
+    border-radius: 0;
+  }
+
+  .contact__form {
+    position: static;
+    padding: 15px 30px 15px 15px;
+    width: 100%;
+  }
+
+  .contact__map {
+    height: 400px;
   }
 }
 
@@ -4315,6 +4386,17 @@ img.mfp-img {
 
   .clients-text {
     padding: 0 10px 140px 10px;
+  }
+
+  .home-contact__block {
+    position: static;
+    width: 100%;
+    padding: 40px 15px;
+    border-radius: 0;
+  }
+
+  .home-contact__map {
+    height: 400px;
   }
 
   .other-page .main-screen__title {

@@ -14,15 +14,35 @@
       </div>
     </div>
   </section>
-
   <section class="contact">
-    <div class="container-fluid p-zero">
-      
+    <div class="container p-zero">
       <div class="row m-0">
-        <div class="home-contact__block">
-          <div class="section-title contact__title">
-            КОНТАКТИ
-          </div>
+        <div class="section-title">
+          НАПИШІТЬ НАМ
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-zero">
+      <div class="row m-0 --relative">
+        <div class="contact__form">
+          <form action="">
+            <div class="form-control">
+              <input type="email" name="callback_email" placeholder="Email" required>
+              <label>*</label>
+            </div>
+            <div class="form-control">
+              <input type="tel" class="mask-phone" placeholder="+38 0(__)-___-__-__" required>
+              <label>*</label>
+            </div>
+            <div class="form-control form-textarea">
+              <textarea name="callback_message" placeholder="Ваше повідомлення"></textarea>
+            </div>
+            <div class="form-control form-submit">
+              <button class="btn btn-primary">НАДІСЛАТИ</button>
+            </div>
+          </form>
+        </div>
+        <div class="home-contact__block contact__block">
           <div class="contact__item">
             <div class="contact__item_title">
               Адреса
