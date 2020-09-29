@@ -3560,6 +3560,10 @@ img.mfp-img {
   position: relative;
 }
 
+.contact .section-title {
+  padding: 0 55px;
+}
+
 .contact .contact__block {
   top: unset;
   bottom: 120px;
