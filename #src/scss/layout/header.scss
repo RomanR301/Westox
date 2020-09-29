@@ -15,6 +15,7 @@
   }
   &-logo {
     display: block;
+    z-index: 22;
     @media (max-width: 1400px) {
       width: 50px;
     }
@@ -29,10 +30,20 @@
       &:hover {
         color: $blueColor;
       }
+      @media (max-width: 1400px) {
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        font-size: 30px;
+        font-weight: 900;
+      }
     }
   }
   &-socials {
     margin-left: 15px;
+    @media (max-width: $breakpoint-xl) {
+      margin: 60px 0 0 0;
+    }
     & li {
       margin-right: 30px;
       &:last-child {
@@ -48,12 +59,19 @@
           color: $blueColor;
         }
       }
+      @media (max-width: 1400px) {
+        font-size: 24px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        font-size: 24px!important;
+      }
     }
   }
   &-btn {
     margin-left: 50px;
     opacity: 0;
     visibility: hidden;
+    z-index: 22;
     @include transition(.3);
     @media (max-width: 1400px) {
       margin-left: auto;
@@ -62,31 +80,154 @@
       }
     }
     @media (max-width: $breakpoint-xl) {
+      margin: auto;
+    }
+    // @media (max-width: $breakpoint-xl) {
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
+  }
+}
+
+.lang {
+  color: $defaultText;
+  line-height: 17px;
+  font-size: 18px;
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:after {
+    content: "\e900";
+    font-family: 'icomoon';
+    position: absolute;
+    right: -15px;
+  }
+  &-options {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    @include transition(.3);
+    @media (max-width: $breakpoint-xl) {
       opacity: 1;
+      position: static;
+      display: flex;  
       visibility: visible;
+      pointer-events: all;
     }
   }
-  &.scroll-header {
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
-    & .header-logo {
-      & img {
-        transform: scale(.6);
-        @media (max-width: $breakpoint-lg) {
-          transform: unset;
-        }
+  &-option {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 30px;
+    cursor: pointer;
+    @include fontSize(16, 18);
+    @include transition(.3);
+    z-index: 99;
+    &:hover {
+      color: $blueColor;
+    }
+    @media (max-width: $breakpoint-xl) {
+      font-size: 30px;
+      margin: 0 20px;
+      font-weight: 900;
+      color: #B1B1B1;
+    }
+    &.selected {
+      @media (max-width: $breakpoint-xl) {
+        color: $blueColor;
       }
     }
-    & a {
-      font-size: 16px;
+  }
+}
+.header-lang {
+  margin: 0 10px;
+  @media (max-width: $breakpoint-xl) {
+    position: absolute;
+    bottom: 60px;
+  }
+}
+.lang-select {
+  &-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+  &__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 24px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    @include transition(.3);
+    @media (max-width: $breakpoint-xl) {
+      display: none;
     }
-    & .header-btn {
+    & span {
+      color: #ffffff;
+    }
+    & i {
+      margin-left: 6px;
+      transform: rotate(90deg);
+      @include transition(.3);
+      &:before {
+        font-size: 10px;
+        display: block;
+      }
+    }
+  }
+  &.open {
+    & .lang-options {
       opacity: 1;
-      visibility: visible; 
+      visibility: visible;
+      pointer-events: all;
     }
-    & .navbar {
-      margin-right: 0;
+    & .lang-select__trigger {
+      & i {
+        transform: rotate(-90deg);
+      }
     }
   }
 }
 
-
+.header.scroll-header {
+  padding: 10px 0;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
+  & .header-logo {
+    & img {
+      transform: scale(.6);
+      @media (max-width: $breakpoint-lg) {
+        transform: unset;
+      }
+    }
+  }
+  & a {
+    font-size: 16px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 30px;
+    }
+  }
+  & .header-btn {
+    opacity: 1;
+    visibility: visible; 
+  }
+  & .navbar {
+    margin-right: 0;
+  }
+  & .lang-select__trigger {
+    font-size: 16px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 30px;
+    }
+  }
+}

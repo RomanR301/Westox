@@ -126,7 +126,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: rgba(81, 92, 193, 0.8);
+		background: radial-gradient(128.51% 128.51% at 50% 50%, #636A7C 0%, rgba(0, 0, 0, 0) 100%);
 		opacity: 0;
 		@include transition(.4);
 		border-radius: 20px;
@@ -234,9 +234,11 @@
 	}
 	@media (max-width: $breakpoint-lg) {
 		width: 48%;
+		margin-bottom: 60px;
 	}
 	@media (max-width: $breakpoint-md) {
 		width: 100%;
+		margin-bottom: 30px;
 	}
 }
 .grid-item {
@@ -308,13 +310,24 @@
 			height: 410px;
 			background-size: contain;
 			position: absolute;
-			right: 0px;
 			top: 180px;
 			display: block;
+			@media (max-width: $breakpoint-lg) {
+				width: 460px;
+			}
 		}
 		&:after {
 			left: 0;
 			transform: rotate(180deg);
+			@media (max-width: $breakpoint-lg) {
+				top: 80px;
+			}
+			@media (max-width: $breakpoint-md) {
+				display: none;
+			}
+		}
+		&:before {
+			right: 0;
 		}
 	}
 	& .section-title {
@@ -365,12 +378,15 @@
 	}
 	&-text {
 		margin-top: 74px;
-		padding-bottom: 120px;
+		padding: 0 10px 120px 10px;
 		opacity: 0;
 		font-weight: 400;
 		@include fontSize(18, 26);
 		line-height: 1.5;
 		@include transition(.3);
+		@media (max-width: $breakpoint-md) {
+			padding: 0 10px 140px 10px;
+		}
 	}
 	& .swiper-button-prev, & .swiper-button-next {
 		top: 22px;
@@ -383,23 +399,41 @@
 			position: absolute;
 			font-size: 26px;
 		}
+		@media (max-width: $breakpoint-xl) {
+			width: 140px;
+		}
+		@media (max-width: $breakpoint-md) {
+
+		}	
 	}
 	& .swiper-button-prev {
-		left: -9%;
+		left: -130px;
+		@media (max-width: $breakpoint-xl) {
+			left: -95px;
+		}
 		&:after {
 			right: 20px;
 		}
 		&:hover {
-			left: -8%;
+			left: -120px;
+			@media (max-width: $breakpoint-xl) {
+				left: -85px;
+			}
 		}
 	}
 	& .swiper-button-next {
-		right: -9%;
+		right: -130px;
+		@media (max-width: $breakpoint-xl) {
+			right: -95px;
+		}
 		&:after {
 			left: 20px;
 		}
 		&:hover {
-			right: -8%;
+			right: -120px;
+			@media (max-width: $breakpoint-xl) {
+				right: -85px;
+			}
 		}
 	}
 }
@@ -452,21 +486,17 @@
 		align-items: center;
 		border-top: 1px solid #303030;
 		margin: -3px;
-		@media (max-width: $breakpoint-lg) {
-			padding: 14px 54px 14px 14px;
-		}
 	}
 	.set > a i{
-		width: 30px;
-		height: 30px;
+		min-width: 30px;
+		min-height: 30px;
+		max-width: 30px;
+		max-height: 30px;
 		background: $whiteColor;
 		border-radius: 100px;
 		position: relative;
 		display: block;
-		@media (max-width: $breakpoint-lg) {
-			position: absolute;
-			right: 15px;
-		}
+		margin-left: 10px;
 		&:before, &:after {
 			content: '';
 			width: 18px;

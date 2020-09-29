@@ -82,7 +82,28 @@ let modal = {
   },
 
   events: function () {
+    let langToggle = document.querySelector('.lang-select-wrapper') !== null;
+    if (langToggle) {
+        (document).querySelector('.lang-select-wrapper').addEventListener('click', function() {
+            this.querySelector('.lang-select').classList.toggle('open');
+            for (const option of document.querySelectorAll(".lang-option")) {
+                option.addEventListener('click', function() {
 
+                    if (!this.classList.contains('selected')) {
+                        this.parentNode.querySelector('.lang-option.selected').classList.remove('selected');
+                        this.classList.add('selected');
+                        this.closest('.lang-select').querySelector('.lang-select__trigger span').textContent = this.textContent;
+                    }
+                })
+            }
+            window.addEventListener('click', function(e) {
+                const select1 = document.querySelector('.lang-select')
+                if (!select1.contains(e.target)) {
+                    select1.classList.remove('open');
+                }
+            });
+        })
+    }
       $(document).on('click', '.modalTrigger', function (e) {
           e.preventDefault();
           let self = $(this),
@@ -287,7 +308,7 @@ $('.popup-gallery').magnificPopup({
             '<div class="mfp-img"></div>'+
             '<div class="mfp-bottom-bar">'+
               '<div class="mfp-title"></div>'+
-              '<a href="www.instagram.com" class="instagram-btn btn btn-primary"><i class="icon-icon-instagram"></i>Переглянути в Instagram</a>'+
+              // '<a href="www.instagram.com" class="instagram-btn btn btn-primary"><i class="icon-icon-instagram"></i>Переглянути в Instagram</a>'+
               '<div class="mfp-counter"></div>'+
             '</div>'+
           '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
@@ -370,17 +391,23 @@ $(document).ready(function () {
 //   })
 });
 
-// let items = $('.grid .grid-item');
-// var attribute = 'data-rellax-speed';
-// let i;
+if($(window).width() > 992) {
+  let items = $('.grid .grid-item');
+  var attribute = 'data-rellax-speed';
+  let i;
 
-// for (i = 0; i < items.length; i++) {
-//   items[i].setAttribute(attribute, Math.random() * (1.8 - 1.3)) - 3;
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute(attribute, Math.random() * (1.9 - 1.3)) - 3;
 
-// }
-// var rellax = new Rellax('.grid-item', {
-//   center: true
-// });
+  }
+  var rellax = new Rellax('.grid-item', {
+    center: true
+  });
+} else {
+  null
+}
+
+
 
 
 
@@ -396,18 +423,14 @@ $(document).ready(function(){
         nextEl: '.swiper-button-prev',
         prevEl: '.swiper-button-next',
     },
-    // breakpoints: {
-    //     320: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 30,
-    //     autoHeight: true,
-    //     },
-    //     767: {
-    //       slidesPerView: 2,
-    //     },
-    //     992: {
-    //         slidesPerView: 3,
-    //     },
-    // }
+    breakpoints: {
+        320: {
+        slidesPerView: 1,
+        autoHeight: true,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+    }
   });
 })
