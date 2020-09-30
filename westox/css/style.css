@@ -4378,6 +4378,64 @@ img.mfp-img {
     margin-bottom: 10px;
   }
 
+  .mfp-bottom-bar {
+    margin-top: -50px;
+  }
+
+  .mfp-figure {
+    padding: 40px 20px 50px 20px;
+  }
+
+  .mfp-arrow {
+    width: 150px;
+    height: 150px;
+    top: 46%;
+  }
+
+  .mfp-arrow:after {
+    font-size: 26px;
+    top: calc(50% - 13px);
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .mfp-arrow-left {
+    left: -105px;
+  }
+
+  .mfp-arrow-left:after {
+    left: 115px;
+  }
+
+  .mfp-arrow-left:hover {
+    -webkit-transform: translate(10px, 0px);
+        -ms-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+
+  .mfp-arrow-right {
+    right: -105px;
+  }
+
+  .mfp-arrow-right:after {
+    right: 115px;
+  }
+
+  .mfp-arrow-right:hover {
+    -webkit-transform: translate(-10px, 0px);
+        -ms-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+
   .grid-sizer,
   .grid-item {
     width: 100%;

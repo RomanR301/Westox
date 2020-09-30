@@ -358,6 +358,9 @@ img.mfp-img {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: $breakpoint-md) {
+    margin-top: -50px;
+  }
 }
 
 .mfp-img {
@@ -372,6 +375,9 @@ img.mfp-img {
   padding: 40px 40px 80px 40px;
   background: #5C5C5C;
   border-radius: 20px;
+  @media (max-width: $breakpoint-md) {
+    padding: 40px 20px 50px 20px;
+  }
 }
 
 img.mfp-img {
@@ -409,7 +415,6 @@ img.mfp-img {
   padding: 15px 25px;
   font-size: 14px;
   line-height: 1;
-  // display: none;
   & i {
     margin-right: 10px;
     &:before {
@@ -438,6 +443,11 @@ img.mfp-img {
   right: unset;
   top: calc(50% - 105px);
   @include transition(.3);
+  @media (max-width: $breakpoint-md) {
+    width: 150px;
+    height: 150px;
+    top: 46%;
+  }
   &:after {
     font-family: 'icomoon';
     content: "\e900";
@@ -451,28 +461,55 @@ img.mfp-img {
     margin: 0;
     left: unset;
     right: unset;
+    @media (max-width: $breakpoint-md) {
+      font-size: 26px;
+      top: calc(50% - 13px);
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &:before {
     display: none;
   }
   &-left {
     left: -130px;
+    @media (max-width: $breakpoint-md) {
+      left: -105px;
+    }
     &:after {
       display: block;
       transform: rotate(180deg);
       left: 130px;
+      @media (max-width: $breakpoint-md) {
+        left: 115px;
+      }
     }
     &:hover {
       transform: translate(20px, 0px);
+      @media (max-width: $breakpoint-md) {
+        transform: translate(10px, 0px);
+      }
     }
   }
   &-right {
     right: -130px;
+    @media (max-width: $breakpoint-md) {
+      right: -105px;
+    }
     &:after {
       right: 130px;
+      @media (max-width: $breakpoint-md) {
+        right: 115px;
+      }
     }
     &:hover {
       transform: translate(-20px, 0px);
+      @media (max-width: $breakpoint-md) {
+        transform: translate(-10px, 0px);
+      }
     }
   }
 }
