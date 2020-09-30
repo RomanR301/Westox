@@ -2587,6 +2587,10 @@ img.mfp-img {
   cursor: pointer;
 }
 
+.mfp-container {
+  overflow-x: hidden;
+}
+
 .mfp-bottom-bar {
   margin-top: -66px;
   display: -webkit-box;
@@ -4417,9 +4421,9 @@ img.mfp-img {
   }
 
   .mfp-arrow-left:hover {
-    -webkit-transform: translate(10px, 0px);
-        -ms-transform: translate(10px, 0px);
-            transform: translate(10px, 0px);
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
   }
 
   .mfp-arrow-right {
@@ -4431,9 +4435,9 @@ img.mfp-img {
   }
 
   .mfp-arrow-right:hover {
-    -webkit-transform: translate(-10px, 0px);
-        -ms-transform: translate(-10px, 0px);
-            transform: translate(-10px, 0px);
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
   }
 
   .grid-sizer,

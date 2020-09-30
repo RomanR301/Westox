@@ -351,7 +351,9 @@ img.mfp-img {
 //     padding-right: 6px; } }
 
 
-
+.mfp-container {
+  overflow-x: hidden;
+}
 
 .mfp-bottom-bar {
   margin-top: -66px;
@@ -490,7 +492,7 @@ img.mfp-img {
     &:hover {
       transform: translate(20px, 0px);
       @media (max-width: $breakpoint-md) {
-        transform: translate(10px, 0px);
+        transform: unset;
       }
     }
   }
@@ -508,7 +510,7 @@ img.mfp-img {
     &:hover {
       transform: translate(-20px, 0px);
       @media (max-width: $breakpoint-md) {
-        transform: translate(-10px, 0px);
+        transform: unset;
       }
     }
   }

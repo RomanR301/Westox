@@ -316,7 +316,7 @@ $('.popup-gallery').magnificPopup({
   },
   callbacks: {
     elementParse: function(item) {
-      console.log(item.el[0].className);
+      // console.log(item.el[0].className);
       if(item.el[0].className == 'video') {
         item.type = 'iframe',
         item.iframe = {
