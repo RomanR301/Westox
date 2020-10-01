@@ -64,16 +64,38 @@
 	&-container {
 		position: relative;
 		& .smoke {
+			// position: absolute;
+			// background-image: url(../img/smoke3.gif);
+			// background-repeat: no-repeat;
+			// background-size: contain;
+			// background-position: bottom;
+			// width: 100%;
+			// height: 120px;
+			// top: -120px;
+			// left: 0;
+			// z-index: -1;
 			position: absolute;
-			background-image: url(../img/smoke.png);
+			background-image: url(../img/smoke111.gif);
 			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: bottom;
+			background-size: cover;
+			// background-position: top;
 			width: 100%;
 			height: 120px;
-			top: -120px;
+			height: 170px;
+			top: -170px;
 			left: 0;
 			z-index: -1;
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 50px;
+				background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),color-stop(73.44%,rgba(0,0,0,.325)),to(rgba(0,0,0,0)));
+				background: -o-linear-gradient(top,rgba(0,0,0,.5) 0,rgba(0,0,0,.325) 73.44%,rgba(0,0,0,0) 100%);
+				background: linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,1) 73.44%,rgba(0,0,0,0) 100%);
+				left: 0;
+				top: -40px;
+			}
 		}
 	}
 	&__badge {
@@ -246,10 +268,12 @@
 	border-radius: 20px;
 	overflow: hidden;
 	position: relative;
-	&.image, &.instagram {
-		& a:before {
+	& a {
+		display: block;
+		&:before {
 			content: '';
 			position: absolute;
+			background-image: url('../img/icons/gallery-zoom-in.svg');
 			background-repeat: no-repeat;	
 			background-size: cover;
 			display: block;
@@ -263,25 +287,33 @@
 			@include transition(.3);
 		}
 	}
-	&.image {
-		& a:before {
-			background-image: url('../img/icons/gallery-zoom-in.svg');
+	& a.video {
+		&:before {
+			content: '';
+			position: absolute;
+			background: url('../img/play.png');
+			background-repeat: no-repeat;
+			background-size: 20%;
+			width: 100%;
+			opacity: 1;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-position: center;
+			z-index: 2;
+			transform: unset;
+			@include transition(.3);
 		}
-	}
-	&.instagram {
-		& a:before {
-			background-image: url('../img/icons/gallery-instagram.svg');
-		}
-	}
-	&.image, &.instagram {
 		&:hover {
-			& a:before {
-				opacity: 1;
+			&:before {
+				transform: scale(1.1);
 			}
 		}
 	}
-	& a {
-		display: block;
+	&:hover {
+		& a:before {
+			opacity: 1;
+		}
 	}
 	& img {
 		display: block;
@@ -305,6 +337,8 @@
 		&:before, &:after {
 			content: '';
 			background: url(../img/carousel-smoke.png);
+			// background: url(../img/smoke555.gif);
+
 			background-repeat: no-repeat;
 			width: 600px;
 			height: 410px;

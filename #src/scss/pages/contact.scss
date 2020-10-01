@@ -3,6 +3,7 @@
 
 .contact {
   position: relative;
+  margin-bottom: 0;
 }
 
 .contact {
@@ -54,6 +55,15 @@
     }
     & img {
       object-fit: cover;
+    }
+  }
+}
+
+.home-contact__block {
+  .section-title {
+    padding: 0; 
+    @media (max-width: $breakpoint-lg) {
+      padding: 0;
     }
   }
 }

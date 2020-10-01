@@ -64,7 +64,8 @@
 
 
 .page-title {
-  background-image: url("../img/text-background.jpg");
+  // background-image: url("../img/text-background.jpg");
+  background-image: url("../img/text-bg.jpg");
   // background-repeat: no-repeat;
   background-size: contain;
   -webkit-background-clip: text;
@@ -74,7 +75,8 @@
   text-align: center;
 }
 .section-title {
-  background-image: url("../img/section-title-mask.png");
+  // background-image: url("../img/section-title-mask.png");
+  background-image: url("../img/text-bg.jpg");
   @include fontSize(40, 100);
   // background-repeat: no-repeat;
   background-size: contain;

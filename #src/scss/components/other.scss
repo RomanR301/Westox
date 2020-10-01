@@ -35,7 +35,12 @@ section {
       height: 45vh;
     }
     & img {
-      object-fit: cover;
+      object-fit: contain;
+      object-position: bottom;
+      @media (max-width: $breakpoint-lg) {
+        object-fit: cover;
+        object-position: center;
+      }
     }
   } 
   &__description {
@@ -69,10 +74,40 @@ section {
 .home-page {
   & .main-screen {
     height: 100vh;
+    &__image {
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        background-image: url(../img/smoke3.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        width: 450px;
+        z-index: -1;
+        height: 100%;
+        bottom: 270px;
+        left: 0;
+        top: unset;
+      }
+      &:after {
+        left: unset;
+        right: 0;
+      }
+    }
   }
   & .main-screen__title {
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 10px;
+    }
+  }
+}
+
+.other-page {
+  & .main-screen {
+    &__image {
+      & img {
+        object-fit: cover;
+      }
     }
   }
 }
