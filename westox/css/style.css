@@ -4252,9 +4252,18 @@ img.mfp-img {
        object-position: center;
   }
 
+  .main-screen .main-screen__content {
+    padding-top: 0;
+  }
+
   .main-screen__title {
     max-width: 100%;
     padding: 0;
+  }
+
+  .home-page .main-screen__image:before,
+  .home-page .main-screen__image:after {
+    display: none;
   }
 
   .home-page .main-screen__title {
@@ -4276,6 +4285,18 @@ img.mfp-img {
         -ms-flex-order: -1;
             order: -1;
     margin-bottom: 20px;
+  }
+
+  .product-item-container .smoke:after {
+    display: none;
+  }
+
+  .product-item-container .smoke {
+    background-image: url("../img/smoke.png");
+    background-size: contain;
+    background-position: bottom;
+    height: 120px;
+    top: -120px;
   }
 
   .home-about__container {

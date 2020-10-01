@@ -60,6 +60,9 @@ section {
     @media (max-width: 1400px) {
       padding-top: 92px;
     }
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 0;
+    }
   }
   &__title {
     max-width: 90%;
@@ -88,6 +91,9 @@ section {
         bottom: 270px;
         left: 0;
         top: unset;
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
       &:after {
         left: unset;
