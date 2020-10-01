@@ -4536,6 +4536,10 @@ img.mfp-img {
             transform: unset;
   }
 
+  .product-item {
+    margin: 0 10px;
+  }
+
   .grid-sizer,
   .grid-item {
     width: 100%;
