@@ -397,7 +397,7 @@ if($(window).width() > 992) {
   let i;
 
   for (i = 0; i < items.length; i++) {
-    items[i].setAttribute(attribute, Math.random() * (1.9 - 1.3)) - 3;
+    items[i].setAttribute(attribute, Math.random() * (1 - 3)) - 3;
 
   }
   var rellax = new Rellax('.grid-item', {
