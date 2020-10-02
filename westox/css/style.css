@@ -909,6 +909,7 @@ section {
 .second-version:after {
   bottom: 20px !important;
   width: 560px !important;
+  display: block !important;
 }
 
 .second-version img {
