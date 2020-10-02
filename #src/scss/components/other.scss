@@ -91,6 +91,7 @@ section {
         bottom: 270px;
         left: 0;
         top: unset;
+        display: none;
         @media (max-width: $breakpoint-lg) {
           display: none;
         }

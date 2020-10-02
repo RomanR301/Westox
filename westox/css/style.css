@@ -892,6 +892,7 @@ section {
   bottom: 270px;
   left: 0;
   top: unset;
+  display: none;
 }
 
 .home-page .main-screen__image:after {
