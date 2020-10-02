@@ -117,3 +117,17 @@ section {
     }
   }
 }
+
+
+.second-version {
+  &:before, &:after {
+    bottom: 20px!important;
+    width: 560px!important;
+  }
+  & img {
+    display: none;
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
+}

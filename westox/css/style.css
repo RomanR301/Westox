@@ -904,6 +904,16 @@ section {
      object-fit: cover;
 }
 
+.second-version:before,
+.second-version:after {
+  bottom: 20px !important;
+  width: 560px !important;
+}
+
+.second-version img {
+  display: none;
+}
+
 .container {
   max-width: 1320px;
   margin: auto;
@@ -4268,6 +4278,10 @@ img.mfp-img {
 
   .home-page .main-screen__title {
     margin-bottom: 10px;
+  }
+
+  .second-version img {
+    display: block;
   }
 
   .header.scroll-header .header-logo img {
