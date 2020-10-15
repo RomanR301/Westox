@@ -1550,13 +1550,24 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 64, #src/scss/layout/header.scss */
+/* line 62, #src/scss/layout/header.scss */
+
+.header-socials a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 66, #src/scss/layout/header.scss */
 
 .header-socials a:hover i:before {
   color: #6091DB;
 }
 
-/* line 76, #src/scss/layout/header.scss */
+/* line 78, #src/scss/layout/header.scss */
 
 .header-btn {
   margin-left: 50px;
@@ -1568,14 +1579,14 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 82, #src/scss/layout/header.scss */
+/* line 84, #src/scss/layout/header.scss */
 
 .header-btn button {
   padding: 13px 30px;
   font-size: 16px;
 }
 
-/* line 100, #src/scss/layout/header.scss */
+/* line 102, #src/scss/layout/header.scss */
 
 .header-control {
   display: -webkit-box;
@@ -1587,7 +1598,7 @@ section {
   margin-left: auto;
 }
 
-/* line 107, #src/scss/layout/header.scss */
+/* line 109, #src/scss/layout/header.scss */
 
 .lang {
   color: #333333;
@@ -1604,7 +1615,7 @@ section {
           align-items: center;
 }
 
-/* line 116, #src/scss/layout/header.scss */
+/* line 118, #src/scss/layout/header.scss */
 
 .lang:after {
   content: "\e900";
@@ -1613,7 +1624,7 @@ section {
   right: -15px;
 }
 
-/* line 122, #src/scss/layout/header.scss */
+/* line 124, #src/scss/layout/header.scss */
 
 .lang-options {
   position: absolute;
@@ -1627,7 +1638,7 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 138, #src/scss/layout/header.scss */
+/* line 140, #src/scss/layout/header.scss */
 
 .lang-option {
   position: relative;
@@ -1644,19 +1655,19 @@ section {
   z-index: 99;
 }
 
-/* line 148, #src/scss/layout/header.scss */
+/* line 150, #src/scss/layout/header.scss */
 
 .lang-option:hover {
   color: #6091DB;
 }
 
-/* line 164, #src/scss/layout/header.scss */
+/* line 166, #src/scss/layout/header.scss */
 
 .header-lang {
   margin: 0 10px;
 }
 
-/* line 172, #src/scss/layout/header.scss */
+/* line 174, #src/scss/layout/header.scss */
 
 .lang-select-wrapper {
   position: relative;
@@ -1667,7 +1678,7 @@ section {
   width: 100%;
 }
 
-/* line 177, #src/scss/layout/header.scss */
+/* line 179, #src/scss/layout/header.scss */
 
 .lang-select__trigger {
   position: relative;
@@ -1688,13 +1699,13 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 191, #src/scss/layout/header.scss */
+/* line 193, #src/scss/layout/header.scss */
 
 .lang-select__trigger span {
   color: #ffffff;
 }
 
-/* line 194, #src/scss/layout/header.scss */
+/* line 196, #src/scss/layout/header.scss */
 
 .lang-select__trigger i {
   margin-left: 6px;
@@ -1706,14 +1717,14 @@ section {
   transition: all 0.3s ease-out;
 }
 
-/* line 198, #src/scss/layout/header.scss */
+/* line 200, #src/scss/layout/header.scss */
 
 .lang-select__trigger i:before {
   font-size: 10px;
   display: block;
 }
 
-/* line 205, #src/scss/layout/header.scss */
+/* line 207, #src/scss/layout/header.scss */
 
 .lang-select.open .lang-options {
   opacity: 1;
@@ -1721,7 +1732,7 @@ section {
   pointer-events: all;
 }
 
-/* line 211, #src/scss/layout/header.scss */
+/* line 213, #src/scss/layout/header.scss */
 
 .lang-select.open .lang-select__trigger i {
   -webkit-transform: rotate(-90deg);
@@ -1729,7 +1740,7 @@ section {
           transform: rotate(-90deg);
 }
 
-/* line 218, #src/scss/layout/header.scss */
+/* line 220, #src/scss/layout/header.scss */
 
 .header.scroll-header {
   padding: 10px 0;
@@ -1738,7 +1749,7 @@ section {
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-/* line 222, #src/scss/layout/header.scss */
+/* line 224, #src/scss/layout/header.scss */
 
 .header.scroll-header .header-logo img {
   -webkit-transform: scale(0.8);
@@ -1746,32 +1757,32 @@ section {
           transform: scale(0.8);
 }
 
-/* line 230, #src/scss/layout/header.scss */
+/* line 232, #src/scss/layout/header.scss */
 
 .header.scroll-header .header-socials i {
   font-size: 20px;
 }
 
-/* line 234, #src/scss/layout/header.scss */
+/* line 236, #src/scss/layout/header.scss */
 
 .header.scroll-header a {
   font-size: 16px;
 }
 
-/* line 240, #src/scss/layout/header.scss */
+/* line 242, #src/scss/layout/header.scss */
 
 .header.scroll-header .header-btn {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 244, #src/scss/layout/header.scss */
+/* line 246, #src/scss/layout/header.scss */
 
 .header.scroll-header .navbar {
   margin-right: 0;
 }
 
-/* line 247, #src/scss/layout/header.scss */
+/* line 249, #src/scss/layout/header.scss */
 
 .header.scroll-header .lang-select__trigger {
   font-size: 16px;
@@ -5263,13 +5274,13 @@ img.mfp-img {
     font-size: 24px;
   }
 
-  /* line 76, #src/scss/layout/header.scss */
+  /* line 78, #src/scss/layout/header.scss */
 
   .header-btn {
     margin-left: auto;
   }
 
-  /* line 88, #src/scss/layout/header.scss */
+  /* line 90, #src/scss/layout/header.scss */
 
   .header-btn button {
     padding: 10px 25px;
@@ -5392,13 +5403,13 @@ img.mfp-img {
     font-size: 24px !important;
   }
 
-  /* line 76, #src/scss/layout/header.scss */
+  /* line 78, #src/scss/layout/header.scss */
 
   .header-btn {
     margin: auto;
   }
 
-  /* line 122, #src/scss/layout/header.scss */
+  /* line 124, #src/scss/layout/header.scss */
 
   .lang-options {
     opacity: 1;
@@ -5410,7 +5421,7 @@ img.mfp-img {
     pointer-events: all;
   }
 
-  /* line 138, #src/scss/layout/header.scss */
+  /* line 140, #src/scss/layout/header.scss */
 
   .lang-option {
     font-size: 30px;
@@ -5419,32 +5430,32 @@ img.mfp-img {
     color: #B1B1B1;
   }
 
-  /* line 157, #src/scss/layout/header.scss */
+  /* line 159, #src/scss/layout/header.scss */
 
   .lang-option.selected {
     color: #6091DB;
   }
 
-  /* line 164, #src/scss/layout/header.scss */
+  /* line 166, #src/scss/layout/header.scss */
 
   .header-lang {
     position: absolute;
     bottom: 60px;
   }
 
-  /* line 177, #src/scss/layout/header.scss */
+  /* line 179, #src/scss/layout/header.scss */
 
   .lang-select__trigger {
     display: none;
   }
 
-  /* line 234, #src/scss/layout/header.scss */
+  /* line 236, #src/scss/layout/header.scss */
 
   .header.scroll-header a {
     font-size: 30px;
   }
 
-  /* line 247, #src/scss/layout/header.scss */
+  /* line 249, #src/scss/layout/header.scss */
 
   .header.scroll-header .lang-select__trigger {
     font-size: 30px;
@@ -5536,7 +5547,7 @@ img.mfp-img {
     display: block;
   }
 
-  /* line 222, #src/scss/layout/header.scss */
+  /* line 224, #src/scss/layout/header.scss */
 
   .header.scroll-header .header-logo img {
     -webkit-transform: unset;
