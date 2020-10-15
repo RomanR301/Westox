@@ -2,6 +2,7 @@
 @import "./#src/scss/abstracts/variables.scss";
 
 .navbar {
+  flex: 1;
   @include transition(.3);
   margin-left: auto;
   &:before {
@@ -43,6 +44,9 @@
   }
 }
 .menu {
+  // margin-left: 20px;
+  flex: 1;
+  justify-content: center;
   @media (max-width: $breakpoint-xl) {
     display: flex;
     flex-direction: column;

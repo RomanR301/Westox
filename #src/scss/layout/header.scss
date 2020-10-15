@@ -16,6 +16,7 @@
   &-logo {
     display: block;
     z-index: 22;
+    // width: 120px;
     @media (max-width: 1400px) {
       width: 50px;
     }
@@ -52,8 +53,11 @@
         margin-right: 0;
       }
     }
-    & i:before {
-      @include transition(.3);
+    & i {
+      font-size: 24px;
+      &:before {
+        @include transition(.3);
+      }
     }
     & a {
       &:hover {
@@ -75,6 +79,10 @@
     visibility: hidden;
     z-index: 22;
     @include transition(.3);
+    & button {
+      padding: 13px 30px;
+      font-size: 16px;
+    }
     @media (max-width: 1400px) {
       margin-left: auto;
       & button {
@@ -88,6 +96,11 @@
     //   opacity: 1;
     //   visibility: visible;
     // }
+  }
+  &-control {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
   }
 }
 
@@ -207,10 +220,15 @@
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
   & .header-logo {
     & img {
-      transform: scale(.6);
+      transform: scale(.8);
       @media (max-width: $breakpoint-lg) {
         transform: unset;
       }
+    }
+  }
+  & .header-socials {
+    & i {
+      font-size: 20px;
     }
   }
   & a {

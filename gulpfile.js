@@ -38,6 +38,7 @@ let {src, dest} = require('gulp'),
   fileinclude = require('gulp-file-include'),
   del = require('del'),
   scss = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('gulp-autoprefixer'),
   group_media = require('gulp-group-css-media-queries'),
   clean_css = require('gulp-clean-css'),
@@ -74,12 +75,14 @@ function css(){
   return src(path.src.css)
     .pipe(
       scss({
-        outputStyle: "expanded"
+        outputStyle: "expanded",
+        sourceComments: 'map'
       })
     )
     .pipe(
       group_media()
     )
+    .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 5 versions'],
       cascade: true
