@@ -83,7 +83,12 @@
 .mb-30 {
   margin-bottom: 30px;
 }
-
+.mb-50 {
+  margin-bottom: 50px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 30px;
+  }
+}
 .column {
   padding: 0 15px;
   @media (max-width: $breakpoint-md) {

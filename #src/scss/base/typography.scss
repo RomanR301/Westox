@@ -63,10 +63,8 @@
 }
 
 
-.page-title {
-  // background-image: url("../img/text-background.jpg");
+.page-title, .section-title {
   background-image: url("../img/text-bg.jpg");
-  // background-repeat: no-repeat;
   background-size: contain;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,16 +73,14 @@
   text-align: center;
 }
 .section-title {
-  // background-image: url("../img/section-title-mask.png");
-  background-image: url("../img/text-bg.jpg");
   @include fontSize(40, 100);
-  // background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  line-height: 1;
   margin-bottom: 30px;
+  text-align: left;
+}
+
+.icon-show-more:before {
+  content: "\e904";
+  color: #fff;
 }
 
 .icon-zoom-in:before {

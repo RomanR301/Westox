@@ -1,6 +1,8 @@
 let front = {
   hamburger: $('.hamburger'),
   nav: $('.navbar'),
+  moreBtn: $('.show-more'),
+  moreContent: $('.home-about__text_inner'),
   $body: $('body'),
   init: function () {
       this.events();
@@ -16,8 +18,15 @@ let front = {
             this.$body.removeClass('active')
         }
     },
-
-
+  toggleMore: function() {
+    if(!this.moreBtn.hasClass('open')) {
+      this.moreBtn.addClass('open');
+      this.moreContent.toggleClass('active');
+    } else {
+      this.moreBtn.removeClass('open');
+      this.moreContent.toggleClass('active');
+    }
+  },
   openTab: function (element, tabName, parent) {
       let i, tab_content, tab_links;
 
@@ -56,6 +65,9 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
+      $(document).on('click', '.show-more', function() {
+          self.toggleMore();
+      })
   }
 };
 
@@ -415,13 +427,13 @@ if($(window).width() > 992) {
 
 $(document).ready(function(){
   var swiperTestimonial = new Swiper('.clients-carousel', {
-    slidesPerView: 3,
+    // slidesPerView: 5,
     // spaceBetween: 30,
     loop: true,
-    centeredSlides: true,
+    // centeredSlides: true,
     navigation: {
-        nextEl: '.swiper-button-prev',
-        prevEl: '.swiper-button-next',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     breakpoints: {
         320: {
