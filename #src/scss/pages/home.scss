@@ -346,6 +346,10 @@
 	}
 }
 
+.gallery {
+	margin-bottom: 90px;
+}
+
 .grid {
 	max-width: 100%;
 	margin: 0 15px;
@@ -648,7 +652,7 @@
 		padding: 30px 0 30px 0;
 		text-decoration: none;
 		color: $whiteColor;
-		font-weight: 600;
+		font-weight: 500;
 		@include fontSize(18, 30);
 		line-height: 22px;
 		-webkit-transition:all 0.2s linear;

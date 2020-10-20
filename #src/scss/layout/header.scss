@@ -7,11 +7,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  // max-width: 100%;
   z-index: 102;
-  overflow:auto; 
+  // overflow:auto; 
   padding: 30px 0;
-  @include transition(.3);
+  @include transition(.4);
   @media (max-width: 1400px) {
     padding: 10px 0;
   }
