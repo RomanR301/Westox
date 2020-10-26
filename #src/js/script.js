@@ -215,7 +215,7 @@ jQuery(function () {
 
 let mainScreenHeight = $('.main-screen').height();
 $(window).scroll(function () {
-  if ($(this).scrollTop() > mainScreenHeight) {
+  if ($(this).scrollTop() > 100) {
     $('header').addClass("scroll-header");
   } else {
   	$('header').removeClass("scroll-header");
