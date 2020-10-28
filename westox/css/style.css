@@ -4609,6 +4609,12 @@ img.mfp-img {
   margin-bottom: 15px;
 }
 
+/* line 39, #src/scss/pages/other.scss */
+
+.opt ul li {
+  margin-bottom: 8px;
+}
+
 /* line 4, #src/scss/pages/opt.scss */
 
 .banner {

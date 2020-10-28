@@ -33,3 +33,11 @@
     margin-bottom: 15px;
   }
 }
+
+.opt {
+  & ul {
+    & li {
+      margin-bottom: 8px;
+    }
+  }
+}
